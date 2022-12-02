@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.vishalbhartips",
+    "module": "vishal",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "vishal-1.0.jar",
+          "url": "vishal-1.0.jar",
+          "size": 700,
+          "sha512": "cd6fd393a5ab7f21ba525fe7ee7ed8f2e700f94bad790b5d267445bdee52f250a7f16925af4b29a2eaa9aaf260e362aa1c5e117c1df4170610685a83269cd147",
+          "sha256": "933dbb216838f362bc4f4092524201c937d2d5a35a6244a3f3e7cf6622057486",
+          "sha1": "65b7a28b5f73be1aecda96ea7362373eddc8b864",
+          "md5": "976e5d304f5a1d98c268320a49b1f003"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "vishal-1.0.jar",
+          "url": "vishal-1.0.jar",
+          "size": 700,
+          "sha512": "cd6fd393a5ab7f21ba525fe7ee7ed8f2e700f94bad790b5d267445bdee52f250a7f16925af4b29a2eaa9aaf260e362aa1c5e117c1df4170610685a83269cd147",
+          "sha256": "933dbb216838f362bc4f4092524201c937d2d5a35a6244a3f3e7cf6622057486",
+          "sha1": "65b7a28b5f73be1aecda96ea7362373eddc8b864",
+          "md5": "976e5d304f5a1d98c268320a49b1f003"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
+}
+
+group 'io.github.vishalbhartips'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication){
+
+            groupId = "io.github.vishalbhartips"
+            artifactId = "vishal"
+            version = "1.0"
+            from components.java
+
+            pom {
+                name = 'Vishal'
+                description = 'sum func'
+                url = 'https://github.com/vishalbhartips/vishal'
+                inceptionYear = '2022'
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'http://www.opensource.org/licenses/mit-license.php'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'vishalbhartips'
+                        name = 'Vishal Bharti'
+                        email = 'vishalbhartips@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/vishalbhartips/vishal.git'
+                    developerConnection = 'scm:git:ssh://github.com/vishalbhartips/vishal'
+                    url = 'https://github.com/vishalbhartips/vishal'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "OSSRH" //  optional target repository name
+            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = project.properties["ossrhUsername"]
+                password = project.properties["ossrhPassword"]
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+test {
+    useJUnitPlatform()
+}
